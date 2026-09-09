@@ -1,0 +1,228 @@
+/* Shared frame for OUSD pathway detail pages. */
+
+:root {
+    --pathway-green: #205F30;
+    --pathway-overlay: rgba(24, 79, 45, .65);
+    --pathway-yellow: #F6B40E;
+    --pathway-hero-height: 680px;
+    --pathway-content-width: 800px;
+}
+
+body {
+    margin: 0;
+    padding-top: 110px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 110px;
+    padding: 12px 40px;
+    box-sizing: border-box;
+    background: var(--pathway-green);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .15);
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-logo {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-text h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.brand-text p {
+    margin: 4px 0 0;
+    color: rgba(255, 255, 255, .8);
+    font-size: .8rem;
+    letter-spacing: .4px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .25s;
+}
+
+.nav-links a:hover {
+    opacity: .75;
+}
+
+.nav-links a.active {
+    padding-bottom: 4px;
+    border-bottom: 2px solid #fff;
+}
+
+.eeap-hero,
+.page-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: var(--pathway-hero-height);
+    min-height: var(--pathway-hero-height);
+    padding: 120px 20px 80px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content,
+.page-hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: var(--pathway-content-width);
+    margin: 0 auto;
+}
+
+.breadcrumbs {
+    position: absolute;
+    top: 44px;
+    left: 8%;
+    z-index: 1;
+    color: rgba(255, 255, 255, .85);
+    font-size: .95rem;
+}
+
+.breadcrumbs a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.breadcrumbs span {
+    margin: 0 6px;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin: 0 0 20px;
+    padding: 8px 18px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, .15);
+    color: #fff;
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.eeap-hero h1,
+.page-hero h1 {
+    margin: 0 0 25px;
+    color: #fff;
+    font-size: clamp(2.7rem, 6vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.eeap-hero p:not(.eyebrow),
+.page-hero .description {
+    max-width: 700px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, .95);
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 16px 36px;
+    border-radius: 999px;
+    background: var(--pathway-yellow);
+    color: #184F2D;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+.hero-btn:hover {
+    background: #ffd34d;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .25);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        min-height: 96px;
+        padding: 10px 20px;
+    }
+
+    .nav-logo {
+        width: 64px;
+        height: 64px;
+    }
+
+    .brand-text h2 {
+        font-size: 1.25rem;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .eeap-hero,
+    .page-hero {
+        height: auto;
+        min-height: 600px;
+        padding: 140px 25px 70px;
+    }
+
+    .breadcrumbs {
+        top: 32px;
+        right: 25px;
+        left: 25px;
+        text-align: center;
+    }
+
+    .eeap-hero h1,
+    .page-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .eeap-hero p:not(.eyebrow),
+    .page-hero .description {
+        font-size: 1.05rem;
+    }
+}
