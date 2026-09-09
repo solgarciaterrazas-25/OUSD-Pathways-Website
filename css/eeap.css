@@ -96,7 +96,8 @@ body{
 
 .eeap-hero {
     position: relative;
-    min-height: 650px;
+    box-sizing: border-box;
+    min-height: 680px;
 
     display: flex;
     align-items: center;
@@ -126,6 +127,24 @@ body{
     z-index: 2;
 }
 
+.breadcrumbs {
+    position: absolute;
+    top: 110px;
+    left: 8%;
+
+    font-size: .95rem;
+    color: rgba(255,255,255,.85);
+}
+
+.breadcrumbs a {
+    color: rgba(255,255,255,.85);
+    text-decoration: none;
+}
+
+.breadcrumbs span {
+    margin: 0 6px;
+}
+
 .eyebrow {
     display: inline-block;
 
@@ -147,6 +166,7 @@ body{
 .eeap-hero h1 {
     margin-bottom: 25px;
 
+    color: #fff;
     font-size: clamp(2.7rem, 6vw, 4.5rem);
     line-height: 1.1;
     font-weight: 700;
@@ -189,8 +209,14 @@ body{
 @media (max-width: 768px) {
 
     .eeap-hero {
-        min-height: 500px;
+        min-height: 540px;
         padding: 90px 25px;
+    }
+
+    .breadcrumbs {
+        position: static;
+        margin-bottom: 30px;
+        text-align: center;
     }
 
     .eeap-hero h1 {
