@@ -127,24 +127,6 @@ body{
     z-index: 2;
 }
 
-.breadcrumbs {
-    position: absolute;
-    top: 110px;
-    left: 8%;
-
-    font-size: .95rem;
-    color: rgba(255,255,255,.85);
-}
-
-.breadcrumbs a {
-    color: rgba(255,255,255,.85);
-    text-decoration: none;
-}
-
-.breadcrumbs span {
-    margin: 0 6px;
-}
-
 .eyebrow {
     display: inline-block;
 
@@ -211,12 +193,6 @@ body{
     .eeap-hero {
         min-height: 540px;
         padding: 90px 25px;
-    }
-
-    .breadcrumbs {
-        position: static;
-        margin-bottom: 30px;
-        text-align: center;
     }
 
     .eeap-hero h1 {

@@ -87,6 +87,10 @@
    GENERAL
 =========================== */
 
+body{
+    --pathway-stats:#2A7048;
+}
+
 *{
     margin:0;
     padding:0;
@@ -173,24 +177,6 @@ p{
     z-index: 2;
 }
 
-.breadcrumbs {
-    position: absolute;
-    top: 110px;
-    left: 8%;
-
-    font-size: .95rem;
-    color: rgba(255,255,255,.85);
-}
-
-.breadcrumbs a {
-    color: rgba(255,255,255,.85);
-    text-decoration: none;
-}
-
-.breadcrumbs span {
-    margin: 0 6px;
-}
-
 .eyebrow {
     display: inline-block;
 
@@ -259,12 +245,6 @@ p{
         padding: 90px 25px;
     }
 
-    .breadcrumbs {
-        position: static;
-        margin-bottom: 30px;
-        text-align: center;
-    }
-
     .page-hero h1 {
         font-size: 2.5rem;
     }
@@ -287,13 +267,14 @@ p{
 
     text-align:center;
 
-    background:#F7FAF8;
+    background:#2A7048;
+    color:white;
 
 }
 
 .stat h2{
 
-    color:#184F2D;
+    color:white;
     font-size:3rem;
 
 }
@@ -302,6 +283,7 @@ p{
 
     margin-top:10px;
     font-weight:600;
+    color:rgba(255,255,255,.92);
 
 }
 
@@ -315,6 +297,8 @@ p{
     grid-template-columns:1fr 1fr;
     gap:70px;
     align-items:center;
+
+    background:#fff;
 
 }
 
