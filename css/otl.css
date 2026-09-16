@@ -440,6 +440,7 @@ p{
 .info-card{
 
     background:white;
+    border-left:6px solid #1D6B3A;
     border-radius:18px;
     padding:35px;
 
