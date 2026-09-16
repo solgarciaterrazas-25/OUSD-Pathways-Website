@@ -293,3 +293,171 @@ body {
         padding: 0 25px;
     }
 }
+
+/* Phone framework shared by both pathway pages. */
+@media (max-width: 720px) {
+    body {
+        padding-top: 0;
+    }
+
+    .navbar {
+        position: static;
+        height: auto;
+        min-height: 0;
+        align-items: stretch;
+        gap: 10px;
+        padding: 14px 20px 10px;
+    }
+
+    .nav-brand {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-logo {
+        width: 54px;
+        height: 54px;
+    }
+
+    .brand-text h2 {
+        font-size: 1.3rem;
+    }
+
+    .brand-text p {
+        margin: 2px 0 0;
+        font-size: .7rem;
+    }
+
+    .nav-links {
+        justify-content: flex-start;
+        gap: 2px;
+        width: 100%;
+        overflow-x: auto;
+        padding: 0 0 3px;
+        scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-links li {
+        flex: 0 0 auto;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 8px 10px;
+        font-size: .84rem;
+        white-space: nowrap;
+    }
+
+    .nav-links a.active {
+        padding-bottom: 6px;
+    }
+
+    .eeap-hero,
+    .page-hero {
+        min-height: 520px;
+        height: auto;
+        padding: 74px 24px;
+    }
+
+    .eeap-hero h1,
+    .page-hero h1 {
+        font-size: clamp(2.5rem, 11vw, 3.6rem);
+    }
+
+    .eeap-hero p:not(.eyebrow),
+    .page-hero .description {
+        font-size: 1.02rem;
+        line-height: 1.65;
+    }
+
+    .eyebrow {
+        margin-bottom: 16px;
+        padding: 7px 13px;
+        font-size: .72rem;
+        letter-spacing: 1.4px;
+    }
+
+    .hero-btn {
+        width:100%;
+        max-width:320px;
+        box-sizing:border-box;
+        margin-top:30px;
+        padding:15px 20px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat {
+        padding: 28px 14px;
+    }
+
+    .stat h2 {
+        font-size: 2.25rem;
+    }
+
+    .stat p {
+        font-size: .88rem;
+    }
+
+    section {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+    .about,
+    .feature-section,
+    .feature,
+    .info-section {
+        gap: 32px;
+        margin: 64px auto;
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+    .benefits,
+    .gallery,
+    .cta {
+        padding: 64px 24px;
+    }
+
+    .about h2,
+    .benefits h2,
+    .section-heading h2,
+    .cta h2,
+    .feature-content h2,
+    .feature-text h2 {
+        font-size: clamp(2rem, 9vw, 2.65rem);
+        line-height: 1.15;
+    }
+
+    .benefit-card,
+    .info-card {
+        padding: 26px 22px;
+    }
+
+    .feature-image img {
+        height:320px;
+        border-radius:16px;
+    }
+
+    .gallery-grid {
+        gap:16px;
+    }
+
+    .gallery-grid img,
+    .gallery-item img {
+        height:280px;
+    }
+}
+
+@media (max-width: 380px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}

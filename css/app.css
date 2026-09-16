@@ -1,7 +1,7 @@
 /* BODY */
 
 body{
-
+    margin:0;
     font-family: Arial, Helvetica, sans-serif;
     background:white;
 
@@ -759,5 +759,176 @@ html{
 
     .resource-card{
         padding:28px 24px;
+    }
+}
+
+/* Phone framework: the navigation becomes a compact two-row header rather
+   than trying to fit the desktop links beside the site name. */
+@media(max-width:720px){
+    .navbar{
+        position:static;
+        align-items:stretch;
+        gap:10px;
+        padding:14px 20px 10px;
+    }
+
+    .nav-brand{
+        justify-content:center;
+        gap:10px;
+    }
+
+    .nav-logo{
+        width:54px;
+        height:54px;
+    }
+
+    .brand-text h2{
+        font-size:1.3rem;
+    }
+
+    .brand-text p{
+        margin:2px 0 0;
+        font-size:.7rem;
+    }
+
+    .nav-links{
+        justify-content:flex-start;
+        gap:2px;
+        width:100%;
+        overflow-x:auto;
+        padding:0 0 3px;
+        scrollbar-width:none;
+    }
+
+    .nav-links::-webkit-scrollbar{
+        display:none;
+    }
+
+    .nav-links li{
+        flex:0 0 auto;
+    }
+
+    .nav-links a{
+        display:block;
+        padding:8px 10px;
+        font-size:.84rem;
+        white-space:nowrap;
+    }
+
+    .nav-links a.active{
+        padding-bottom:6px;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+        gap:32px;
+        min-height:0;
+        padding:48px 24px 56px;
+    }
+
+    .hero h1{
+        margin:14px 0;
+        font-size:clamp(2.55rem, 12vw, 4rem);
+    }
+
+    .description{
+        font-size:1.08rem;
+        line-height:1.55;
+    }
+
+    .hero-right img{
+        height:330px;
+        border-radius:18px;
+    }
+
+    .program-links{
+        flex-direction:column;
+        gap:16px;
+        margin-top:30px;
+    }
+
+    .program-card{
+        width:auto;
+        padding:24px;
+    }
+
+    .impact{
+        padding:64px 24px;
+        scroll-margin-top:0;
+    }
+
+    .section-intro h2,
+    .home-apply h2,
+    .resources-intro h2,
+    .resources-faq h2{
+        font-size:clamp(2rem, 9vw, 2.75rem);
+    }
+
+    .impact-metrics{
+        grid-template-columns:repeat(2, 1fr);
+        margin:36px 0 56px;
+    }
+
+    .impact-metric{
+        min-height:132px;
+        padding:24px 14px;
+    }
+
+    .impact-metric strong{
+        font-size:2.5rem;
+    }
+
+    .impact-gallery{
+        gap:16px;
+        margin:32px auto 56px;
+    }
+
+    .impact-photo{
+        height:300px;
+    }
+
+    .impact-photo--tall{
+        grid-column:auto;
+    }
+
+    .featured-video{
+        padding:26px 22px;
+        border-radius:18px;
+    }
+
+    .news-card{
+        min-height:185px;
+        padding:24px;
+    }
+
+    .home-apply{
+        padding:64px 24px;
+    }
+
+    .home-apply-links{
+        align-items:stretch;
+        flex-direction:column;
+    }
+
+    .home-apply a{
+        text-align:center;
+    }
+
+    .resources-hero{
+        min-height:0;
+        padding:68px 24px 64px;
+    }
+
+    .resources-hero h1{
+        font-size:clamp(2.45rem, 11vw, 3.6rem);
+    }
+
+    .resources,
+    .resources-faq{
+        padding:64px 24px;
+    }
+
+    .faq-list details{
+        padding:0 18px;
     }
 }
