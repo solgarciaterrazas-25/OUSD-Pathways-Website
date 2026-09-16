@@ -1,0 +1,99 @@
+/* Consistent image sizes with generous pathway section spacing. */
+.about,.feature-section{
+    box-sizing:border-box;
+    width:100%;
+    max-width:1100px;
+    margin:90px auto;
+    padding:0 32px;
+}
+.about{gap:60px;grid-template-columns:repeat(2,minmax(0,1fr));}
+.feature{gap:60px;margin:0 0 90px;grid-template-columns:repeat(2,minmax(0,1fr));}
+.feature:last-child{margin-bottom:0;}
+.feature-image img,.feature-image .coursework-photo,.feature-image .internship-photo{
+    width:100%;
+    height:auto;
+    aspect-ratio:3 / 2;
+    object-fit:cover;
+    border-radius:16px;
+}
+.about-image img{
+    width:100%;
+    max-width:none;
+    height:auto;
+    aspect-ratio:3 / 2;
+    display:block;
+    margin:auto;
+    object-fit:contain;
+    border-radius:16px;
+}
+.about h2,.feature-text h2{font-size:2rem;line-height:1.2;margin-bottom:18px;}
+.about p{margin-bottom:25px;line-height:1.8;}
+.feature ul{margin-top:18px;}
+.feature li{margin-bottom:8px;}
+.benefits,.gallery,.cta{padding:90px max(24px,calc((100% - 1036px)/2));}
+.info-section{max-width:1100px;margin:90px auto;padding:0 32px;gap:20px;}
+.benefit-grid{gap:20px;}
+.benefit-card,.info-card{padding:26px;}
+.section-heading,.benefits h2{margin-bottom:32px;}
+.otl-experience-gallery .gallery-grid{gap:20px;max-width:1036px;}
+.gallery-logo-panel{
+    width:180px;
+    height:180px;
+    box-sizing:border-box;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0;
+    margin:0 auto 20px;
+    background:white;
+    border-radius:50%;
+    overflow:hidden;
+}
+.gallery-logo-panel img{display:block;width:90%;height:auto;object-fit:contain;}
+.info-section{margin-bottom:56px;}
+.otl-experience-gallery{padding-top:48px;background:#F7FAF8;}
+.otl-experience-gallery .section-heading{
+    display:grid;
+    grid-template-columns:120px minmax(0,1fr);
+    column-gap:28px;
+    row-gap:10px;
+    align-items:center;
+    max-width:1036px;
+    margin:0 auto 36px;
+    text-align:left;
+}
+.otl-experience-gallery .gallery-logo-panel{
+    grid-row:1 / 3;
+    width:120px;
+    height:120px;
+    margin:0;
+    border:1px solid #DCE8DE;
+}
+.otl-experience-gallery .section-heading h2{margin:0;align-self:end;line-height:1.2;}
+.otl-experience-gallery .section-heading p{margin:0;max-width:760px;align-self:start;line-height:1.65;}
+@media(max-width:1000px){
+    .about,.feature{grid-template-columns:1fr;gap:26px;}
+    .feature.reverse .feature-image,.feature.reverse .feature-text{order:initial;}
+}
+@media(max-width:720px){
+    .about,.feature-section,.info-section{margin:64px auto;padding:0 24px;}
+    .feature{padding:0;margin:0 0 64px;}
+    .feature:last-child{margin-bottom:0;}
+    .benefits,.gallery,.cta{padding:64px 24px;}
+    .about h2,.feature-text h2{font-size:1.8rem;}
+    .gallery-logo-panel{width:150px;height:150px;}
+    .info-section{margin-bottom:40px;}
+    .otl-experience-gallery{padding-top:36px;}
+    .otl-experience-gallery .section-heading{
+        grid-template-columns:1fr;
+        gap:14px;
+        text-align:center;
+        margin-bottom:28px;
+    }
+    .otl-experience-gallery .gallery-logo-panel{
+        grid-row:auto;
+        width:100px;
+        height:100px;
+        margin:0 auto;
+    }
+}

@@ -160,7 +160,7 @@ p{
             rgba(24, 79, 45, 0.65),
             rgba(24, 79, 45, 0.65)
         ),
-        url("../images/IMG_2271.jpeg");
+        url("../images/otl-hero-web.jpg");
 
     background-size: cover;
     background-position: center center;
@@ -300,6 +300,39 @@ p{
 
     background:#fff;
 
+}
+
+.about .intro-program-logo{
+    display:block;
+    width:150px;
+    max-width:100%;
+    height:auto;
+    margin:0 0 24px;
+    border-radius:0;
+    box-shadow:none;
+}
+
+.about .playground-photo{
+    width:100%;
+    height:auto;
+    aspect-ratio:4 / 5;
+    object-fit:cover;
+    object-position:45% 65%;
+}
+
+.cta .apply-logo-panel{
+    width:180px;
+    max-width:100%;
+    margin:0 auto 28px;
+    padding:12px;
+    background:white;
+    border-radius:16px;
+}
+
+.apply-logo-panel img{
+    display:block;
+    width:100%;
+    height:auto;
 }
 
 .about-image img{
@@ -526,6 +559,64 @@ p{
     font-weight:600;
     color:#184F2D;
 
+}
+
+.otl-experience-gallery .gallery-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    max-width:1200px;
+    margin:auto;
+}
+
+.otl-experience-gallery .gallery-grid img{
+    height:auto;
+    aspect-ratio:3 / 2;
+    object-fit:cover;
+    filter:brightness(1.04) contrast(1.03) saturate(1.04);
+}
+
+.otl-experience-gallery img[src$="otl-mentorship-web.jpg"]{
+    filter:brightness(1.16) contrast(.96) saturate(1.05);
+}
+
+.feature-image .internship-photo{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+.feature-image .coursework-photo{
+    width:100%;
+    height:auto;
+    aspect-ratio:3 / 2;
+    object-fit:cover;
+    object-position:50% 70%;
+    filter:brightness(1.04) saturate(.94);
+}
+
+.otl-experience-gallery .gallery-grid figcaption{
+    padding:22px 24px;
+    text-align:left;
+}
+
+.otl-experience-gallery figcaption strong{
+    display:block;
+    font-size:1.15rem;
+    line-height:1.35;
+}
+
+.otl-experience-gallery figcaption span{
+    display:block;
+    margin-top:8px;
+    color:#536057;
+    font-size:1rem;
+    font-weight:400;
+    line-height:1.6;
+}
+
+@media(max-width:600px){
+    .otl-experience-gallery .gallery-grid{
+        grid-template-columns:1fr;
+    }
 }
 
 /* ===========================
