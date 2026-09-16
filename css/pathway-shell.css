@@ -302,6 +302,7 @@ body {
 
     .navbar {
         position: static;
+        flex-direction: column;
         height: auto;
         min-height: 0;
         align-items: stretch;
