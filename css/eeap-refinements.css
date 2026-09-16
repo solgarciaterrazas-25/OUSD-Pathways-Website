@@ -1,0 +1,40 @@
+/* Match the pathway's gold labels and keep photo rows consistent. */
+.section-tag{
+    display:block;
+    color:#D49B00;
+    font-size:1rem;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+.feature-content ul{
+    list-style:none;
+    padding-left:0;
+}
+.feature-content li{
+    padding-left:1.4em;
+    text-indent:-1.4em;
+    margin-bottom:10px;
+    line-height:1.65;
+}
+.about,.feature-section{
+    box-sizing:border-box;
+    width:100%;
+    max-width:1200px;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:60px;
+}
+.about-image img,.feature-image img{
+    display:block;
+    width:100%;
+    height:auto;
+    aspect-ratio:4 / 3;
+    object-fit:cover;
+    border-radius:20px;
+}
+@media(max-width:1000px){
+    .about,.feature-section{grid-template-columns:1fr;gap:32px;}
+    .feature-section.reverse .feature-image,
+    .feature-section.reverse .feature-content{order:initial;}
+}
